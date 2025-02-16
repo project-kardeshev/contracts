@@ -1,0 +1,42 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "description": "Contracts for the AO ecosystem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/project-kardeshev/contracts.git"
+  },
+  "keywords": [
+    "ao",
+    "smartcontract",
+    "lua",
+    "rust",
+    "c"
+  ],
+  "author": "atticus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/project-kardeshev/contracts/issues"
+  },
+  "homepage": "https://github.com/project-kardeshev/contracts#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@permaweb/ao-loader": "^0.0.45",
+    "arweave": "^1.15.5",
+    "eslint": "^9.18.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.1"
+  },
+  "lint-staged": {
+    "**/*.{ts,js,mjs,cjs,md,json}": [
+      "prettier --write ."
+    ],
+    "**/README.md": [
+      "markdown-toc-gen insert"
+    ]
+  }
+}
