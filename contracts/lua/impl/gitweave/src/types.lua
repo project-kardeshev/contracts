@@ -1,0 +1,29 @@
+-- need to specify this as a module so it can be imported
+---@alias AoMessage {
+--- Id: string,
+--- From: string,
+--- Target: string,
+--- Tags: table<string, string | number>,
+--- Owner: string,
+--- Data: string | number | nil,
+--- [string]: string | number,
+---}
+
+---@alias Handler {
+--- name: string,
+--- pattern: function|table<string, string|nil>,
+--- handle: function,
+--- maxRuns: integer,
+---}
+---@alias HandlersList table<string, Handler>
+
+---@alias Handlers {
+--- list: HandlersList,
+--- add: function,
+--- before: function,
+--- after: function,
+--- remove: function,
+--- prepend: function,
+--- append: function,
+--- evaluate: function,
+---}

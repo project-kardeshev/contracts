@@ -6,5 +6,6 @@
   "trailingComma": "all",
   "importOrder": ["<THIRD_PARTY_MODULES>", "^[.{1,2}/]"],
   "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "importOrderSortSpecifiers": true,
+  "proseWrap": "always"
 }

@@ -247,7 +247,6 @@ function utils.errorHandler(err)
 	return debug.traceback(err)
 end
 
-
 function utils.createHandler(tagName, tagValue, handler, position)
 	assert(
 		type(position) == "string" or type(position) == "nil",

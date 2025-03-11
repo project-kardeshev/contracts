@@ -330,7 +330,7 @@ function kv_store.init()
 			}),
 		})
 	end)
-	--- TODO: (prepended handler) provide max data size limit as configuration and leverage that here, throw if too large 
+	--- TODO: (prepended handler) provide max data size limit as configuration and leverage that here, throw if too large
 end
 
 return kv_store

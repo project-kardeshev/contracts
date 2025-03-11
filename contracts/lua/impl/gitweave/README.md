@@ -1,8 +1,72 @@
 # Gitweave
 
-Gitweave is a Lua AO Process implementation that acts as a remote git repository.
+Gitweave is a Lua AO Process network that acts as a remote git repository.
 
-It leverages LuaVFS, lua git, and custom apis using the Handlers module from AOS to create message handlers.
+It leverages lua git, and custom apis using the Handlers module from AOS to
+create message handlers.
+
+## TODO:
+[ ] - git repo process
+        - Upload manager for multipart uploads due to 10mb restriction on MU's
+            - this entails creating an upload plan, chunking the blob into 10mb base64 strings, uploading, and recombining them
+            - good candidate for coroutines, eg `once` handlers that expect a file upload part. (once handlers should behave in an LRU manner with a max concurrent jobs)
+        - LRU branch pruning to maintain memory limits. Can have callback notices on messages "process full, delete some stuff"
+            - ideally this actually pushes old branches to remote processes... maybe a FUSE-VFS where the remote is an ao process?
+
+[ ] - PubSub process
+[ ] - Observability manager
+[ ] - actions process
+
+
+## APIs
+
+### Info
+
+Provides all the relevant info to display the repository
+
+### Git
+
+Git apis provide access to things like pushing commits, creating refs (branches,
+tags), creating pull requests, etc...
+
+#### Commits
+
+#### Refs (branches, tags)
+
+#### Pull Requests
+
+#### Releases
+
+#### Issues
+mut
+### Actions
+
+### Pubsub
+
+The pubsub mechanism operates with a permissioned proxy pub sub contract. All
+publishes go through that, and all subscriptions that this process is interested
+in are provided by the pubsub proxy.
+
+### Metrics
+
+The metrics mechanism operates with a proxy contract for maintaining a database
+of metrics for all system components (actions runners, pubsub, git, etc). This
+contract can be used for powering dashboards. Its a bucket for all metrics in
+the gitweave network.
+
+- memory usage
+- GC performance (later)
+- FS/SQL DB stats (rows, columns) "disk usage" (later)
+- git history stats
+- runtime of messages
+- active users
+- Coroutine monitoring variables
+- error rates
+
+### Logs
+
+### Traces
+
 
 ## Developers
 
