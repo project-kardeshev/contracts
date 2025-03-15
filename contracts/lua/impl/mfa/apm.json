@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ankushKun/apm-cli/main/apm.schema.json",
+  "name": "mfa",
+  "vendor": "@project-kardeshev",
+  "description": "multifactor authentication for messages",
+  "main": "src/init.lua",
+  "version": "1.0.0",
+  "repository": "https://github.com/project-kardeshev/contracts",
+  "license": "MIT",
+  "keywords": ["mfa", "multifactor", "auth", "authentication"],
+  "authors": ["https://github.com/atticusofsparta"],
+  "warnings": {
+    "modifiesGlobalState": true,
+    "installMessage": ""
+  },
+  "dependencies": {}
+}
