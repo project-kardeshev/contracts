@@ -1,0 +1,5 @@
+# ao-dev-cli options
+stack_size: 134217728 # 3MiB
+initial_memory: 1073741824 # 1gb stack size is included in initial memory, along with heap
+maximum_memory: 4294967296 # 4gb
+target: 32 # wasm32 or wasm 64
