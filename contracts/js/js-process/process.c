@@ -121,7 +121,7 @@ static JSValue js_ao_log(JSContext *ctx, JSValueConst this_val,
     return JS_UNDEFINED;
 }
 
-const char *process_handle(const char *msg, const char *env) {
+const char *handle(const char *msg, const char *env) {
     // Initialize ao environment
     ao_init(env);
     

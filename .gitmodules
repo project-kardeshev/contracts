@@ -1,3 +1,0 @@
-[submodule "contracts/js/js-process/quickjs"]
-	path = contracts/js/js-process/quickjs
-	url = https://github.com/bellard/quickjs.git
